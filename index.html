@@ -147,6 +147,18 @@
     @media(max-width:390px){.site-nav{gap:12px}.site-nav a{font-size:10.5px}}
     @media(max-width:780px){.site-nav{justify-content:center;gap:2px 18px}.profile-links{gap:12px 18px}.talks .work-item{grid-template-columns:110px minmax(0,1fr)}.talk-month{font-size:18px}.talk-venue-name{font-size:13px}}
     @media(max-width:390px){.site-nav{gap:0 12px}.talks .work-item{grid-template-columns:98px minmax(0,1fr)}}
+    .research-layout{grid-template-columns:290px minmax(0,1fr) 204px;gap:32px;align-items:start}
+    .research-layout>*{min-width:0}
+    .latest-papers{padding:18px;background:var(--soft);border:1px solid var(--rule);border-radius:3px}
+    .latest-papers-title{font-size:11px;font-weight:650;line-height:1.6;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:0 0 16px}
+    .latest-paper-list{list-style:none;margin:0;padding:0}
+    .latest-paper+.latest-paper{margin-top:18px;padding-top:18px;border-top:1px solid var(--rule)}
+    .latest-paper h4{font-size:14px;font-weight:600;line-height:1.55;letter-spacing:-.01em;margin:0 0 7px}
+    .latest-paper a{font-size:12px;text-decoration:none}
+    .latest-paper a:hover{text-decoration:underline}
+    @media screen and (max-width:1100px){.research-layout{grid-template-columns:minmax(0,1fr) 204px;gap:31px 32px}.research-layout>.section-heading{grid-column:1/-1}}
+    @media screen and (max-width:780px){.research-layout{grid-template-columns:minmax(0,1fr)}.research-layout>.section-heading{grid-column:auto}}
+    @media print{.research-layout{grid-template-columns:220px minmax(0,1fr);gap:30px}.research-layout>.section-heading{grid-column:auto}.latest-papers{grid-column:2;break-inside:avoid}}
   </style>
 </head>
 <body>
@@ -191,7 +203,7 @@
       </div>
     </div>
     <section id="research" aria-labelledby="research-title">
-      <div class="wrap section-grid">
+      <div class="wrap section-grid research-layout">
         <div class="section-heading">
           <p class="section-kicker">01 / Research</p>
           <h2 id="research-title">Quantum measurements.<br> Complex optical systems.</h2>
@@ -211,6 +223,19 @@
             <div><h3>Looking ahead</h3><p>My broader goal is to understand and engineer quantum information flow in complex physical systems through the joint design of input states, interactions, and measurements.</p></div>
           </article>
         </div>
+        <aside class="latest-papers" aria-labelledby="latest-papers-title">
+          <h3 class="latest-papers-title" id="latest-papers-title">Latest papers</h3>
+          <ul class="latest-paper-list">
+            <li class="latest-paper">
+              <h4>Quantum Noise Engineering in Advanced LIGO</h4>
+              <a href="https://arxiv.org/pdf/2611.07074" aria-label="arXiv PDF: Quantum Noise Engineering in Advanced LIGO">arXiv ↗</a>
+            </li>
+            <li class="latest-paper">
+              <h4>Observing and evading quantum back-action on a kilogram-scale oscillator</h4>
+              <a href="https://arxiv.org/pdf/2609.19317" aria-label="arXiv PDF: Observing and evading quantum back-action on a kilogram-scale oscillator">arXiv ↗</a>
+            </li>
+          </ul>
+        </aside>
       </div>
     </section>
     <section id="about" class="background" aria-labelledby="about-title">
@@ -316,9 +341,9 @@
         </div>
         <ol class="work-list">
           <li class="work-item">
-            <div class="work-year">—</div>
-            <div><h3 class="work-title">Quantum Noise Engineering in Advanced LIGO</h3><p class="work-byline"><strong>B. Kabagöz</strong></p><p class="work-venue"><em>Contemporary Physics</em> <span class="work-type">In review</span></p></div>
-            <div class="work-links"><a href="https://github.com/BKabagoz/LIGO-quantum-tools" aria-label="GitHub software for Quantum Noise Engineering in Advanced LIGO">GitHub ↗</a></div>
+            <div class="work-year">2026</div>
+            <div><h3 class="work-title"><a href="https://arxiv.org/abs/2611.07074">Quantum Noise Engineering in Advanced LIGO</a></h3><p class="work-byline"><strong>B. Kabagöz</strong></p><p class="work-venue"><em>Contemporary Physics</em> <span class="work-type">In review</span></p></div>
+            <div class="work-links"><a href="https://github.com/BKabagoz/LIGO-quantum-tools" aria-label="GitHub software for Quantum Noise Engineering in Advanced LIGO">GitHub ↗</a><a href="https://arxiv.org/pdf/2611.07074" aria-label="arXiv PDF: Quantum Noise Engineering in Advanced LIGO">arXiv ↗</a></div>
           </li>
           <li class="work-item">
             <div class="work-year">2026</div>
